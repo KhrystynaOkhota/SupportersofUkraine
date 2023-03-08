@@ -1,0 +1,15 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.s-contacts {
+  &__map {
+    width: calc(100% + 30px);
+    margin-left: -15px;
+    height: 70vh;
+    margin-top: 15px;
+    @media (max-width: $breakpoint-md) {
+      margin-top: 40px;
+    }
+  }
+}
+

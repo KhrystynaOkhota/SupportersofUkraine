@@ -1,0 +1,370 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+
+.s-presentation {
+  padding: 35px 0 70px 0;
+  @media (max-width: $breakpoint-md) {
+    padding-bottom: 0;
+  }
+
+  &__content {
+    padding-right: 30px;
+    @media (max-width: $breakpoint-md) {
+      text-align: justify;
+      padding: 0;
+    }
+
+  }
+
+  & .heading {
+    margin-bottom: 50px;
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 24px;
+      & span {
+        right: 100%;
+        margin-right: 25px;
+
+        &:before {
+          right: 100%;
+        }
+
+        &:after {
+          left: -100000%;
+        }
+      }
+    }
+
+    &__wrap {
+      @media (max-width: $breakpoint-md) {
+        text-align: right;
+      }
+    }
+  }
+
+  & .text {
+    & p {
+      margin-bottom: 20px;
+    }
+
+    & h2 {
+      font-weight: 600;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+    -webkit-transition: all .7s;
+    -o-transition: all .7s;
+    transition: all .7s;
+
+    &-wrap {
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      display: block;
+      width: 50vw;
+      min-height: 360px;
+      @media (max-width: $breakpoint-md) {
+        width: calc(100% + 40px);
+        left: -20px;
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+.s-mission {
+  & .heading {
+    margin-bottom: 52px;
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 76px;
+    }
+
+    &__wrap {
+      text-align: right;
+    }
+  }
+
+  & .text {
+    font-weight: 500;
+    @include fontSize(24, 40);
+    line-height: 1.275;
+    color: #5A5A5A;
+    margin: 0 10% 50px 10%;
+    @media (max-width: $breakpoint-md) {
+      margin: 0 0 63px 0;
+    }
+
+  }
+
+  &__content {
+    max-width: calc(13.4px * 50);
+
+    @media (max-width: $breakpoint-md) {
+      padding: 63px 20px;
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    object-fit: cover;
+    @media (max-width: $breakpoint-md) {
+      opacity: .25;
+    }
+
+    &-wrap {
+      z-index: 2;
+      position: relative;
+      margin-left: -20px;
+
+
+      padding-bottom: 66.213%;
+      height: 300px;
+      overflow: hidden;
+      display: block;
+
+      @media (max-width: $breakpoint-md) {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+    }
+  }
+
+  & .btn-primary {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+
+    color: $whiteColor;
+    background-color: $accentColor;
+    padding: 13px;
+  }
+
+  .s-text {
+
+  }
+}
+
+.s-vision {
+  padding: 94px 0;
+  @media (max-width: $breakpoint-md) {
+    padding: 45px 0 0 0;
+  }
+
+  & .heading {
+    margin-bottom: 46px;
+    @media (max-width: 1340px) {
+      margin-bottom: 40px;
+    }
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__content {
+    padding-right: 60px;
+    @media (max-width: $breakpoint-md) {
+      padding: 0;
+      margin-bottom: 30px;
+      text-align: justify;
+    }
+  }
+
+  &__img {
+    &-wrap {
+      margin-left: auto;
+      @media (min-width: 1300px) {
+        margin-right: calc((-100vw + 1340px) / 2);
+        left: 40px;
+      }
+      @media (max-width: 1300px) {
+        margin-right: -20px;
+        width: calc(100% + 20px);
+      }
+      @media (max-width: $breakpoint-md) {
+        margin-right: auto;
+        width: calc(100% + 40px);
+        margin-left: -20px;
+      }
+    }
+  }
+}
+
+.s-text-bg {
+  padding: 39px 0;
+  background: rgba(44, 97, 173, 0.8);
+  @media (max-width: $breakpoint-md) {
+    padding: 130px 0 50px 0;
+  }
+
+  & .heading {
+    @include fontSize(70, 193);
+    font-weight: 900;
+    line-height: 0.8;
+    color: rgba(44, 97, 173, 0.2);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    @media (max-width: $breakpoint-md) {
+      top: 20px;
+      transform: translate(-50%, 0);
+      width: 100%;
+      max-width: 400px;
+      left: 50%;
+    }
+  }
+
+  & .text {
+    color: $whiteColor;
+  }
+}
+
+.s-values {
+  padding: 50px 0;
+  margin-bottom: 85px;
+  @media (max-width: $breakpoint-md) {
+    margin: 0;
+  }
+
+  & .heading {
+    margin-bottom: 32px;
+  }
+
+  & .text {
+    font-weight: 500;
+    @include fontSize(20, 32);
+    line-height: 1.275;
+    color: #3D3D3D;
+  }
+
+  &__img {
+    opacity: 0.15;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    &-wrap {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      height: 100%;
+      width: 100%;
+      background: rgba(255, 255, 255, 1);
+    }
+  }
+}
+
+.s-team--about {
+  padding: 60px 0;
+  @media (max-width: $breakpoint-md) {
+    padding: 54px 0 30px 0;
+  }
+}
+
+.s-ambassadors {
+  padding: 80px 0;
+
+  & .heading {
+    margin-bottom: 50px;
+  }
+
+  & .swiper {
+    &-slide {
+      padding: 50px 0;
+
+
+      & .s-team {
+        &__item {
+          transition: all 200ms linear;
+          transform: scale(0.9);
+          z-index: 0;
+        }
+
+        &__img {
+          &-wrap {
+            &:after {
+              background: linear-gradient(90deg, rgba(255, 255, 255, 0.97) 0%, rgba(255, 255, 255, 0.84) 59.44%, rgba(255, 255, 255, 0.68) 114.86%);
+            }
+          }
+        }
+      }
+
+
+      &-prev, &-next {
+        & .s-team {
+          &__item {
+            transition: all 200ms linear;
+            transform: scale(1);
+            z-index: 50;
+            @media (max-width: $breakpoint-md) {
+              transform: scale(0.9);
+            }
+          }
+
+          &__img {
+            &-wrap {
+              &:after {
+                background: rgba(44, 97, 173, 0.8);
+              }
+            }
+          }
+        }
+      }
+
+      &-active {
+
+        .s-team {
+          &__img {
+            &-wrap {
+              &:after {
+                content: '';
+                z-index: 2;
+                background: transparent;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                top: 0;
+                bottom: 0;
+                left: 0;
+              }
+            }
+          }
+
+          &__item {
+            transition: all 200ms linear;
+            transform: scale(1.1);
+            z-index: 150;
+
+            @media (max-width: $breakpoint-md) {
+              transform: scale(1.1);
+            }
+          }
+
+          &__info {
+            opacity: 1;
+            @include transition(.4);
+          }
+        }
+      }
+    }
+  }
+}

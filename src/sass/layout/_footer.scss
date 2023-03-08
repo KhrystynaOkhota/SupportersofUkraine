@@ -1,0 +1,248 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.footer {
+  border-top: 1px solid $accentColor;
+  overflow: hidden;
+
+  &__copyright {
+    padding: 15px;
+    font-weight: 400;
+    @include fontSize(14, 16);
+    line-height: 1;
+    color: $primaryColor;
+    @media (max-width: $breakpoint-md) {
+      padding: 10px;
+    }
+
+    &:before {
+      content: '';
+      height: 1px;
+      width: 2000%;
+      background-color: #2C61AD;
+      position: absolute;
+      top: 0;
+      left: -100%;
+    }
+  }
+
+  &__content {
+    padding: 60px 0;
+    @media (max-width: $breakpoint-lg) {
+     padding: 30px 0;
+    }
+  }
+
+  &-item {
+    padding: 0 5px;
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 30px;
+    }
+
+    &__title {
+      font-weight: 600;
+      @include fontSize(14, 16);
+      line-height: 1.25;
+      text-transform: uppercase;
+      color: $primaryColor;
+      margin-bottom: 24px;
+      @media (max-width: $breakpoint-xl) {
+        min-height: auto;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  & .contacts-list {
+    &:not(&:last-child) {
+      margin-bottom: 10px;
+    }
+
+    & li {
+      &:not(&:last-child) {
+        margin-bottom: 5px;
+        @media (max-width: $breakpoint-md) {
+          margin-bottom: 1px;
+        }
+      }
+    }
+
+    & a {
+      @include transition(.4);
+
+      &:hover {
+        color: $accentColor;
+      }
+    }
+
+    & li, & a {
+      font-weight: 400;
+      @include fontSize(12, 14);
+      line-height: 1.25;
+      color: $primaryColor;
+
+    }
+  }
+
+  & .menu {
+    &-item {
+      &:not(&:last-child) {
+        margin-bottom: 5px;
+      }
+
+      & a {
+        font-weight: 500;
+        @include fontSize(14, 16);
+        line-height: 1.25;
+        color: $primaryColor;
+        @include transition(.3);
+
+        &:hover {
+          color: $accentColor;
+        }
+      }
+    }
+  }
+
+  & .social {
+    &__list {
+      margin: 38px 0;
+      @media (max-width: $breakpoint-lg) {
+        margin: 0 ;
+      }
+    }
+
+    &__item {
+      width: 33px;
+      height: 33px;
+
+      &:not(&:last-child) {
+        margin-right: 9px;
+      }
+    }
+  }
+
+  & .btn {
+    &-donate {
+      margin-right: 30px;
+    }
+  }
+
+  .card-list {
+    display: flex;
+
+    &__item {
+      &:not(&:last-child) {
+        margin-right: 20px;
+      }
+
+      & img {
+        object-fit: fill;
+      }
+    }
+  }
+
+  .contact-item {
+    &__info {
+      & a {
+        font-weight: 500;
+        color: $accentColor;
+        position: relative;
+
+        &:after {
+          content: '';
+          width: 100%;
+          height: 1px;
+          background-color: $accentColor;
+          position: absolute;
+          bottom: -2px;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          @include transition(.5);
+        }
+
+        &:hover {
+          &:after {
+            width: 0;
+          }
+        }
+      }
+    }
+  }
+
+
+  .logo {
+    &__wrap {
+      grid-template-columns: 70px 1fr;
+      display: grid;
+      grid-column-gap: 4px;
+      max-width: 380px;
+
+      @media (max-width: $breakpoint-lg) {
+        position: relative;
+        max-width: 380px;
+        margin: 0 auto 50px auto;
+      }
+    }
+
+    &__icon {
+
+    }
+
+    &__title {
+      & span {
+        @include fontSize(24, 32);
+      }
+
+    }
+
+    &__desc {
+      @include fontSize(11, 13);
+      max-width: 250px;
+      @media (max-width: $breakpoint-xl) {
+        max-width: 200px;
+      }
+    }
+  }
+}
+
+
+.contact-item {
+  grid-template-columns: 1fr 40px;
+  display: grid;
+  grid-column-gap: 20px;
+  margin-bottom: 5px;
+  @media (max-width: $breakpoint-md) {
+    grid-template-columns: 1fr 34px;
+    grid-column-gap: 10px;
+  }
+  &__info {
+    & li, & a {
+      font-weight: 400;
+      @include fontSize(14, 16);
+      line-height: 147.7%;
+      color: $primaryColor;
+    }
+  }
+
+  &__img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    object-position: center;
+
+    &-wrap {
+      width: 40px;
+      height: 40px;
+      border-radius: 100%;
+      border: 1px solid $accentColor;
+      @media (max-width: $breakpoint-md) {
+        width: 34px;
+        height: 34px;
+      }
+    }
+  }
+}
+
+

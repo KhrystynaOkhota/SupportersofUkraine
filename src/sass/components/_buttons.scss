@@ -1,0 +1,97 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.btn {
+  position: relative;
+  box-shadow: none;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Futura', serif;
+
+  padding: 15px;
+  font-weight: 500;
+  font-size: 16px;
+  @include fontSize(14, 16);
+  line-height: 24px;
+  border: none;
+  @include transition(.4);
+
+  &:focus {
+    outline: none;
+  }
+
+  &-primary {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: $whiteColor;
+    background-color: $accentColor;
+    padding: 13px;
+    min-width: 140px;
+    @include transition(.3);
+    @media (max-width: $breakpoint-lg) {
+      padding: 6px 12px;
+    }
+
+    &:hover {
+      border-color: $accentColor;
+      color: $accentColor;
+    }
+  }
+
+  &-white {
+    color: $accentColor;
+    background-color: rgba(255, 255, 255, 1);
+    @include fontSize(15, 20);
+    min-width: 200px;
+    @media (max-width: $breakpoint-md) {
+      min-width: 150px;
+      padding: 9px;
+    }
+
+    &:hover {
+      background-color: rgba(255, 255, 255, .4);
+    }
+  }
+
+  &-close {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 1px solid $accentColor;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  &-circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    border: 1px solid $whiteColor;
+    cursor: pointer;
+    @media (max-width: $breakpoint-md) {
+      width: 23px;
+      height: 23px;
+    }
+
+    & i {
+      font-size: 8px;
+      @include fontSize(7, 9);
+      color: $whiteColor;
+    }
+  }
+
+  &-more {
+    color: #2C61AD;
+    display: inline-block;
+
+    & i {
+      padding-left: 5px;
+      font-size: 10px;
+    }
+  }
+
+}
+

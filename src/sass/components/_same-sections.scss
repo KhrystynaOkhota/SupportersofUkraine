@@ -1,0 +1,60 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.s-text {
+  padding: 60px 0;
+  @media (max-width: $breakpoint-md) {
+    padding: 40px 0;
+  }
+
+  & .heading {
+    margin-bottom: 60px;
+    @media (max-width: 1340px) {
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__desc {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 40px;
+    -moz-column-gap: 40px;
+    column-gap: 40px;
+    @media (max-width: $breakpoint-md) {
+      -webkit-column-count: 1;
+      -moz-column-count: 1;
+      column-count: 1;
+    }
+  }
+}
+
+.s-gallery {
+  padding: 34px 0;
+
+  & .swiper {
+    &-controls {
+      margin-bottom: 34px;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: 1;
+
+    &-wrap {
+      padding-top: 90%;
+      position: relative;
+      overflow: hidden;
+    }
+  }
+}
