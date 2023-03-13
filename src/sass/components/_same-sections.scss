@@ -40,6 +40,12 @@
     &-controls {
       margin-bottom: 34px;
     }
+
+    &-pagination {
+      @media (max-width: $breakpoint-md) {
+        margin-top: 20px;
+      }
+    }
   }
 
   &__img {

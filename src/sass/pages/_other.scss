@@ -1,0 +1,67 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.other-page {
+  height: calc(100vh - 70px);
+  margin-top: 70px;
+  overflow: hidden;
+  padding-top: 0;
+  @media (max-width: $breakpoint-md) {
+    height: auto;
+    margin-top: 52px;
+    padding: 50px 0;
+  }
+
+  &.thanks {
+
+  }
+
+  &__content {
+    background: #2E3050;
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 90px 8%;
+    @media (max-width: $breakpoint-md) {
+      padding: 53px 3%;
+    }
+  }
+
+  &__number {
+    font-weight: 700;
+    @include fontSize(100, 122);
+    line-height: 0.9;
+    color: $accentColor;
+  }
+
+  &__mask {
+    width: 88px;
+    @media (max-width: $breakpoint-md) {
+      width: 69px;
+    }
+  }
+
+  &__title {
+    @include fontSize(28, 62);
+    font-weight: bold;
+    line-height: 1;
+    color: $accentColor;
+    margin-bottom: 20px;
+
+    & img {
+      margin-left: 20px;
+      width: 100%;
+      max-width: 73px;
+    }
+  }
+
+  &__description {
+    width: 80%;
+    margin: 0 auto 28px auto;
+    @include fontSize(12, 16);
+    line-height: 1.6;
+    color: $whiteColor;
+    @media (max-width: $breakpoint-md) {
+      width: 90%;
+    }
+  }
+}

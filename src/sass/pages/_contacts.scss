@@ -2,6 +2,8 @@
 @import "../abstracts/variables";
 
 .s-contacts {
+
+
   &__map {
     width: calc(100% + 30px);
     margin-left: -15px;
@@ -13,3 +15,68 @@
   }
 }
 
+
+.s-contacts {
+  & .heading {
+    margin-bottom: 27px;
+  }
+
+  & .contact-item {
+    font-size: 20px;
+
+    &__title {
+      font-weight: 600;
+    }
+
+    &__link {
+      @include transition(.5);
+
+      &:hover {
+        color: $accentColor;
+      }
+    }
+  }
+
+  & .social {
+    &__list {
+      @media (max-width: $breakpoint-md) {
+
+      }
+    }
+
+    &__item {
+      &:nth-child(1), &:nth-child(2) {
+        @media (min-width: $breakpoint-md) {
+          display: none;
+        }
+      }
+
+      @media (max-width: $breakpoint-md) {
+        &:not(&:last-child) {
+          margin-right: 15px;
+        }
+      }
+      @media (max-width: 375px) {
+        width: 35px;
+        height: 35px;
+        &:not(&:last-child) {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+
+  &:not(&--home) {
+    padding: 60px 0 75px 0;
+    @media (max-width: $breakpoint-md) {
+      padding: 30px 0 45px 0;
+    }
+  }
+
+  &--home {
+    padding: 53px 0;
+    @media (max-width: $breakpoint-md) {
+      padding: 37px 0;
+    }
+  }
+}
