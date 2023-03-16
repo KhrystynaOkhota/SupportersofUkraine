@@ -1,0 +1,32 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.to-contribute {
+  background-color: $accentColor;
+  padding: 55px 0 35px 0;
+
+  &__item {
+    grid-template-columns: 55px 1fr;
+    display: grid;
+    grid-column-gap: 20px;
+  }
+
+  &__img {
+    &-wrap {
+    }
+  }
+
+  &__title {
+    margin-bottom: 25px;
+    @include fontSize(16, 18);
+    color: $whiteColor;
+  }
+
+  &__content {
+    & .btn-white {
+      @include fontSize(12, 15);
+      padding: 9px 3px 8px 3px;
+    }
+  }
+
+}

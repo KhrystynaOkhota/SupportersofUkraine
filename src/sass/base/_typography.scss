@@ -48,8 +48,15 @@ h1, h2, h3, h4, h5 {
 
 
 
-
-
+.icon-location:before {
+  content: "\e909";
+}
+.icon-close:before {
+  content: "\e907";
+}
+.icon-phone:before {
+  content: "\e908";
+}
 .icon-facebook:before {
   content: "\e903";
 }

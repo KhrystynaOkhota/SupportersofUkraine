@@ -44,7 +44,7 @@
     color: $accentColor;
     background-color: rgba(255, 255, 255, 1);
     @include fontSize(15, 20);
-    min-width: 200px;
+    min-width: 120px;
     @media (max-width: $breakpoint-md) {
       min-width: 150px;
       padding: 9px;
@@ -63,6 +63,12 @@
     position: absolute;
     top: 20px;
     right: 20px;
+    & i {
+      font-size: 10px;
+      color: $accentColor;
+      @include fontSize(8, 10);
+      @include transition(.4);
+    }
   }
 
   &-circle {
@@ -71,6 +77,10 @@
     border-radius: 100%;
     border: 1px solid $whiteColor;
     cursor: pointer;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+    @include transition(.4);
     @media (max-width: $breakpoint-md) {
       width: 23px;
       height: 23px;
@@ -78,8 +88,20 @@
 
     & i {
       font-size: 8px;
-      @include fontSize(7, 9);
       color: $whiteColor;
+      @include fontSize(7, 9);
+      @include transition(.4);
+    }
+
+    &:hover {
+      border-color: #C7C7C7;
+      -webkit-transform: translateX(15px);
+      -ms-transform: translateX(15px);
+      transform: translateX(15px);
+
+      & i {
+        color: #C7C7C7;
+      }
     }
   }
 
@@ -89,7 +111,7 @@
 
     & i {
       padding-left: 5px;
-      @include fontSize(8,10);
+      @include fontSize(8, 10);
     }
   }
 
