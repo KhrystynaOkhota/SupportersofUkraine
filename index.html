@@ -26,7 +26,7 @@
             <span></span>
         </div>
 
-        <a href="#" class="logo__wrap align-middle">
+        <a href="index.html" class="logo__wrap align-middle">
             <img src="assets/img/logo.svg" alt="logo company" class="logo__icon">
 
             <div class="text-right">
@@ -57,18 +57,20 @@
                     </li>
                 </ul>
             </nav>
-            <a href="" class="btn  btn-donate d-none d-md-block">Donate</a>
+            <a href="donate.html" class="btn  btn-donate d-none d-md-block">Donate</a>
             <div class="d-flex align-middle align-right">
-                <nav class="languages-navigation  d-md-block">
-                    <ul id="lang-navigation" class="lang">
-                        <li class="lang-item current-lang "><a href="#">EN</a></li>
-                        <li class="lang-item"><a href="#">RU</a></li>
+                <nav class="languages-navigation d-none d-md-block">
+                    <ul class="languages-menu">
+                        <select name="lang_choice_1" id="lang_choice_1">
+                            <option value="uk">UA</option>
+                            <option value="ru" selected="selected">RU</option>
+                        </select>
                     </ul>
                 </nav>
             </div>
         </div>
 
-        <a href="" class="btn  btn-donate d-block d-md-none">Donate</a>
+        <a href="donate.html" class="btn  btn-donate d-block d-md-none">Donate</a>
     </div>
 </header>
 
@@ -808,7 +810,7 @@
     <div class="container ">
         <div class="row footer__content">
             <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 logo__col">
-                <a href="#" class=" logo__wrap align-middle">
+                <a href="index.html" class=" logo__wrap align-middle">
                     <img src="assets/img/logo.svg" alt="logo company" class="logo__icon">
 
                     <div class="">
@@ -1003,57 +1005,18 @@
 
 <script src="./assets/js/jquery-3.6.0.min.js"></script>
 <script src="assets/js/swiper-bundle.min.js"></script>
+<script src="assets/js/jquery.selectric.min.js"></script>
 <script src="assets/js/js_app.min.js"></script>
 
 <div class="popup-wrapper">
     <div class="bg-layer"></div>
-
-    <div class="popup-content" data-rel="anketa">
-        <div class="modal-body">
-            <div class="modal-content">
-                <div class="modal-content__close"><i class="icon-close"></i></div>
-
-
-                <div class="call-back-form">
-                    <h3 class="call-back-form__title">ЗАКАЗАТЬ <b>ЗВОНОК</b></h3>
-                    <form>
-                        <div class="row m-row">
-                            <div class="column col-xl-12 col-lg-12 col-md-12 col-xs-12">
-                                <div class="form-control">
-                                    <label for="cb-name" class="form-control__label">Введите ваше имя</label>
-                                    <input class="form-control__input" id="cb-name"
-                                           type="text"
-                                           name="" value=""
-                                           placeholder="" title="">
-                                </div>
-                            </div>
-                            <div class="column col-xl-12 col-lg-12 col-md-12 col-xs-12">
-                                <div class="form-control">
-                                    <label for="cb-phone" class="form-control__label">Ваш номер телефона</label>
-                                    <input class="form-control__input" id="cb-phone"
-                                           type="tel"
-                                           name="" value=""
-                                           placeholder="" title="">
-                                </div>
-                            </div>
-                            <div class="column col-xl-12 col-lg-12 col-md-12 col-xs-12 text-right">
-                                <input type="submit" value="Отправить"
-                                       class="btn btn-primary form-control__btn">
-                            </div>
-                        </div>
-                    </form>
-                </div>
-
-            </div>
-        </div>
-    </div>
 
     <div class="popup-content" data-rel="more">
         <div class="layer-close"></div>
 
 
         <div class="popup-container cv section">
-            <div class="btn-close"><i class="icon-close"></i></div>
+            <div class="btn-close d-flex align-middle align-center"><i class="icon-close"></i></div>
 
             <div class="row m-row">
                 <div class="column col-xl-4 col-lg-4 col-md-6 col-xs-12">
@@ -1352,6 +1315,14 @@
     });
 
 </script>
+
+
+<script>
+    $(function () {
+        $('select').selectric();
+    });
+</script>
+
 <script>document.addEventListener('wpcf7mailsent', function (event) {
     _functions.openPopup('.popup-content[data-rel="1"]');
 }, false);</script>
