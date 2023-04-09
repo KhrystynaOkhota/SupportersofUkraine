@@ -273,28 +273,26 @@
   }
 }
 
-.s-team--about {
-  padding: 60px 0;
-  @media (max-width: $breakpoint-md) {
-    padding: 54px 0 30px 0;
-  }
-}
 
 .s-ambassadors {
   padding: 80px 0;
+  @media (max-width: $breakpoint-md) {
+    padding: 30px 0 50px 0;
+  }
 
   & .heading {
     margin-bottom: 50px;
   }
 
   & .swiper {
-    &-controls{
+    &-controls {
       width: 100%;
       max-width: 1340px;
       margin: auto;
       padding-left: 15px;
       padding-right: 15px;
     }
+
     &-wrapper {
 
     }

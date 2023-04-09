@@ -1,7 +1,6 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
-
 .icon {
   padding-left: 30px;
   position: relative;
@@ -30,7 +29,6 @@
     height: 2px;
   }
 }
-
 
 .s-results {
   padding: 35px 0 96px 0;
@@ -121,7 +119,6 @@
     }
   }
 }
-
 
 .s-about {
   padding: 50px 0;
@@ -357,13 +354,9 @@
 }
 
 .s-team {
-  padding-bottom: 60px;
-  @media (min-width: $breakpoint-md) {
-    padding-bottom: 40px;
-  }
-
-  &--about {
-
+  padding: 60px 0;
+  @media (max-width: $breakpoint-md) {
+    padding: 54px 0 30px 0;
   }
 
   &__row {
@@ -392,7 +385,7 @@
 
     @media (max-width: $breakpoint-md) {
       margin-left: 0;
-      padding: 0 0 20px 0;
+      padding: 0 0 34px 0;
       max-width: 100%;
     }
   }
@@ -504,7 +497,7 @@
     &-slide {
       //padding: 30px 0;
       @media (max-width: $breakpoint-md) {
-        padding: 40px 0;
+        //padding: 40px 0;
       }
 
       & .s-team {
@@ -566,6 +559,14 @@
   }
 }
 
+.home {
+  & .s-team {
+    padding-top: 0;
+    @media (max-width: $breakpoint-md) {
+      padding: 0 0 60px 0;
+    }
+  }
+}
 
 .banner {
   position: relative;
@@ -592,13 +593,12 @@
     right: 0;
     width: 40%;
     background-color: rgba(44, 97, 173, 0.5);
-    //max-width: 650px;
     padding: 2%;
     z-index: 1;
     @media (max-width: $breakpoint-md) {
       padding: 16px 29px 36px 29px;
       width: 100%;
-      max-width: 100%;
+      max-width: 840px;
       top: auto;
     }
   }
@@ -758,7 +758,6 @@
 .swiper-container.swiper-initialized {
   opacity: 1;
 }
-
 
 .cv {
   padding: 60px 20px 20px 20px;

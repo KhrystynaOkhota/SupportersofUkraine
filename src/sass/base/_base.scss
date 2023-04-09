@@ -103,24 +103,30 @@ img {
   z-index: 3;
 }
 
+.body-padding {
+  height: 80px;
+  @media (max-width: $breakpoint-md) {
+    height: 50px;
+  }
+}
+
 body {
   &.overflow-hidden {
     // padding-left: calc(100vw - 100%);
     overflow: hidden;
 
   }
+
+  &.home {
+    & .body-padding {
+      height: 0;
+    }
+  }
 }
 
 
 .full-height, body, html {
   height: 100%;
-}
-
-.body-padding {
-  height: 80px;
-  @media (max-width: $breakpoint-md) {
-    height: 50px;
-  }
 }
 
 
@@ -367,7 +373,7 @@ body {
   background: transparent;
   position: relative;
   overflow: hidden;
-  width: 45px;
+  width: 60px;
   text-align: center;
   @include transition(.4);
 
@@ -408,7 +414,7 @@ body {
   top: 100%;
   z-index: -1;
   left: 50%;
-  width: 45px !important;
+  width: 60px !important;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);

@@ -1,31 +1,152 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
+.s-donate {
+  padding: 58px 0 52px 0;
+  @media (max-width: $breakpoint-md) {
+    padding: 31px 0 32px 0;
+  }
+
+  & .heading__wrap {
+    margin-bottom: 34px;
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 22px;
+    }
+  }
+
+  & .details-payment {
+    @include fontSize(14, 18);
+
+    & p + p {
+      margin-top: 10px;
+    }
+
+    & p {
+      color: $accentColor;
+      font-weight: 500;
+    }
+
+    & span {
+      color: #000;
+      font-weight: 400;
+    }
+  }
+
+  .mt-30 {
+    margin-top: 30px;
+    @media (max-width: $breakpoint-md) {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+  }
+}
+
 .to-contribute {
   background-color: $accentColor;
   padding: 55px 0 35px 0;
+  @media (max-width: $breakpoint-md) {
+    padding: 40px 0 60px 0;
+  }
+
+  &__column {
+    &:nth-child(1) {
+      @media (max-width: $breakpoint-md) {
+        margin-bottom: 60px;
+      }
+    }
+  }
 
   &__item {
-    grid-template-columns: 55px 1fr;
+    grid-template-columns: 50px 1fr;
     display: grid;
     grid-column-gap: 20px;
   }
 
   &__img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    object-position: center;
+
     &-wrap {
+      width: 50px;
+      height: 50px;
     }
   }
 
   &__title {
-    margin-bottom: 25px;
+    font-weight: 500;
+
     @include fontSize(16, 18);
-    color: $whiteColor;
+
+    &:not(.--black) {
+      color: $whiteColor;
+    }
+
+    &.--black {
+      color: $primaryColor;
+    }
   }
 
   &__content {
     & .btn-white {
       @include fontSize(12, 15);
       padding: 9px 3px 8px 3px;
+      margin-top: 25px;
+    }
+  }
+
+}
+
+.tab {
+  margin-bottom: 54px;
+
+  &-nav {
+    display: flex;
+    width: 100%;
+
+    &__wrap {
+      width: 100%;
+
+    }
+
+    &__item {
+      font-weight: 500;
+      @include fontSize(16, 20);
+      border: 1px solid $accentColor;
+      background-color: $whiteColor;
+      color: #3D3D3D;
+      cursor: pointer;
+      padding: 8px 10px 9px 10px;
+      position: relative;
+      text-align: center;
+      width: 25%;
+
+      & + .tab-nav__item {
+        border-left: 0;
+      }
+
+      &.current {
+        background-color: $accentColor;
+        color: $whiteColor
+      }
+    }
+  }
+
+  &-content {
+    display: none;
+    background: #FAFAFA;
+    padding: 34px;
+    @media (max-width: $breakpoint-md) {
+      padding: 30px 15px;
+    }
+
+    &.current {
+      display: inherit;
+    }
+
+    &__wrap {
+
     }
   }
 

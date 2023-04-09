@@ -35,8 +35,7 @@
     }
 
     &:hover {
-      border-color: $accentColor;
-      color: $accentColor;
+      background-color: rgba(44, 97, 173, 0.7);
     }
   }
 
@@ -63,12 +62,26 @@
     position: absolute;
     top: 20px;
     right: 20px;
-    & i {
-      font-size: 10px;
-      color: $accentColor;
-      @include fontSize(8, 10);
-      @include transition(.4);
+
+    &:after,&:before{
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%) rotate(45deg);
+      -ms-transform: translate(-50%, -50%) rotate(45deg);
+      transform: translate(-50%, -50%) rotate(45deg);
+      height: 1px;
+      width: 60%;
+      color: inherit;
+      background-color: $accentColor;
     }
+    &::after {
+      -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+      -ms-transform: translate(-50%, -50%) rotate(-45deg);
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
   }
 
   &-circle {
@@ -89,7 +102,6 @@
     & i {
       font-size: 8px;
       color: $whiteColor;
-      @include fontSize(7, 9);
       @include transition(.4);
     }
 
