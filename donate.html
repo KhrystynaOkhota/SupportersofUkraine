@@ -26,7 +26,7 @@
             <span></span>
         </div>
 
-        <a href="#" class="logo__wrap align-middle">
+        <a href="index.html" class="logo__wrap align-middle">
             <img src="assets/img/logo.svg" alt="logo company" class="logo__icon">
 
             <div class="text-right">
@@ -57,12 +57,14 @@
                     </li>
                 </ul>
             </nav>
-            <a href="" class="btn  btn-donate d-none d-md-block">Donate</a>
+            <a href="donate.html" class="btn  btn-donate d-none d-md-block">Donate</a>
             <div class="d-flex align-middle align-right">
-                <nav class="languages-navigation  d-md-block">
-                    <ul id="lang-navigation" class="lang">
-                        <li class="lang-item current-lang "><a href="#">EN</a></li>
-                        <li class="lang-item"><a href="#">RU</a></li>
+                <nav class="languages-navigation d-none d-md-block">
+                    <ul class="languages-menu">
+                        <select name="lang_choice_1" id="lang_choice_1">
+                            <option value="uk">UA</option>
+                            <option value="eng" selected="selected">ENG</option>
+                        </select>
                     </ul>
                 </nav>
             </div>
@@ -79,20 +81,136 @@
     <section class="section s-donate">
         <div class="container">
             <div class="row">
-                <div class="heading__wrap text-right">
-                    <h1 class="heading text-xl text-uppercase --relative">
-                        Donation <span></span>
-                    </h1>
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="heading__wrap text-right heading-reverse">
+                        <h1 class="heading text-xl text-uppercase --relative">
+                            Donation <span></span>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row align-left ">
+
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12 d-flex align-center">
+                    <div class="to-contribute__item mt-30">
+                        <div class="to-contribute__img-wrap d-flex align-center align-middle">
+                            <img src="assets/img/donation2.png" alt="logo icon" class="to-contribute__img">
+                        </div>
+                        <div class="to-contribute__content">
+                            <div class="to-contribute__title text-uppercase --black">To contribute <br> by Mono</div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-xs-12 tab">
+
+                    <div class="tab-nav__wrap">
+                        <ul class="tab-nav">
+                            <li class="tab-nav__item current" data-tab="tab-news-1">BTC</li>
+                            <li class="tab-nav__item" data-tab="tab-news-2">ETH</li>
+                            <li class="tab-nav__item" data-tab="tab-news-3">USDT</li>
+                            <li class="tab-nav__item" data-tab="tab-news-4">TRX</li>
+                        </ul>
+                    </div>
+                    <div class="tab-content__wrap">
+
+                        <div id="tab-news-1" class="tab-content current">
+                            <div class="details-payment">
+                                <p>Recipient: <span data-copy-text="">Charitable organization "Charity Fund "XXXXXXX"</span></p>
+                                <p>EDRPOU code:<span data-copy-text=""> 39764400 </span></p>
+                                <p>IBAN: <span data-copy-text=""> UA893005280000026007455028483</span></p>
+                                <p>Purpose of payment: <span data-copy-text="">Charitable contribution</span></p>
+                            </div>
+                        </div>
+
+                        <div id="tab-news-2" class="tab-content">
+                            <div class="details-payment">
+                                <p><span>Recipient:</span>Charitable organization "Charity Fund "XXXXXXX"</p>
+                                <p><span>EDRPOU code:</span> 39764400</p>
+                                <p><span>IBAN:</span> UA893005280000026007455028483</p>
+                                <p><span>Purpose of payment:</span> Charitable contribution</p>
+                            </div>
+                        </div>
+
+                        <div id="tab-news-3" class="tab-content">
+                            <div class="details-payment">
+                                <p><span>Recipient:</span>Charitable organization "Charity Fund "XXXXXXX"</p>
+                                <p><span>EDRPOU code:</span> 39764400</p>
+                                <p><span>IBAN:</span> UA893005280000026007455028483</p>
+                                <p><span>Purpose of payment:</span> Charitable contribution</p>
+                            </div>
+                        </div>
+                        <div id="tab-news-4" class="tab-content">
+                            <div class="details-payment">
+                                <p><span>Recipient:</span>Charitable organization "Charity Fund "XXXXXXX"</p>
+                                <p><span>EDRPOU code:</span> 39764400</p>
+                                <p><span>IBAN:</span> UA893005280000026007455028483</p>
+                                <p><span>Purpose of payment:</span> Charitable contribution</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row align-left ">
+
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12 d-flex align-center">
+                    <div class="to-contribute__item mt-30">
+                        <div class="to-contribute__img-wrap d-flex align-center align-middle">
+                            <img src="assets/img/donation1.png" alt="logo icon" class="to-contribute__img">
+                        </div>
+                        <div class="to-contribute__content">
+                            <div class="to-contribute__title text-uppercase --black">To contribute <br> by Mono</div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-xs-12 tab">
+
+                    <div class="tab-nav__wrap">
+                        <ul class="tab-nav">
+                            <li class="tab-nav__item current" data-tab="tab-crypto-1">BTC</li>
+                            <li class="tab-nav__item" data-tab="tab-crypto-2">ETH</li>
+                            <li class="tab-nav__item" data-tab="tab-crypto-3">USDT</li>
+                            <li class="tab-nav__item" data-tab="tab-crypto-4">TRX</li>
+                        </ul>
+                    </div>
+                    <div class="tab-content__wrap">
+
+                        <div id="tab-crypto-1" class="tab-content current">
+                            <div class="details-payment">
+                                <p data-copy-text="">XXXXXXXXXXXXX test1</p>
+                                s
+                            </div>
+                        </div>
+
+                        <div id="tab-crypto-2" class="tab-content">
+                            <div class="details-payment">
+                                <p data-copy-text="">XXXXXXXXXXXXXXXXXXXXXXXXXXXX test2</p>
+
+                            </div>
+                        </div>
+
+                        <div id="tab-crypto-3" class="tab-content">
+                            <div class="details-payment">
+                                <p data-copy-text="">XXXXXXXXXXXXXX test3</p>
+
+                            </div>
+                        </div>
+                        <div id="tab-crypto-4" class="tab-content">
+                            4
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
         <div class="to-contribute">
             <div class="container">
                 <div class="row align-center">
-                    <div class="column col-xl-4 col-lg-4 col-md-4 col-sm-12 d-flex align-center">
+                    <div class="column col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-12 d-flex align-center to-contribute__column">
                         <div class="to-contribute__item">
-                            <div class="to-contribute__img-wrap">
+                            <div class="to-contribute__img-wrap d-flex align-center align-middle">
                                 <img src="assets/img/partner-1.svg" alt="logo icon" class="to-contribute__img">
                             </div>
                             <div class="to-contribute__content">
@@ -101,10 +219,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="column col-xl-4 col-lg-4 col-md-4 col-sm-12 d-flex align-center">
+                    <div class="column col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-12 d-flex align-center to-contribute__column">
                         <div class="to-contribute__item">
-                            <div class="to-contribute__img-wrap">
-                                <img src="assets/img/partner-1.svg" alt="logo icon" class="to-contribute__img">
+                            <div class="to-contribute__img-wrap d-flex align-center align-middle">
+                                <img src="assets/img/donation3.png" alt="logo icon" class="to-contribute__img">
                             </div>
                             <div class="to-contribute__content">
                                 <div class="to-contribute__title text-uppercase">To contribute <br> by Mono</div>
@@ -117,14 +235,9 @@
         </div>
     </section>
 
-
     <section class="section s-contacts s-contacts--home">
         <div class="container">
-            <div class="row">
-                <h3 class="heading text-xl text-uppercase --relative d-block d-md-none">
-                    Contact Us <span></span>
-                </h3>
-            </div>
+
             <div class="row m-row align-middle">
                 <div class="column col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 d-none d-md-flex align-left">
                     <div class="contact-item d-flex align-middle align-right text-left">
@@ -197,7 +310,7 @@
     <div class="container ">
         <div class="row footer__content">
             <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 logo__col">
-                <a href="#" class=" logo__wrap align-middle">
+                <a href="index.html" class=" logo__wrap align-middle">
                     <img src="assets/img/logo.svg" alt="logo company" class="logo__icon">
 
                     <div class="">
@@ -306,7 +419,7 @@
             <div class="col-xl-3 col-lg-3 col-md-3 col-sm-8 col-xs-8">
                 <div class="footer-item">
 
-                    <div class="contact-item d-flex align-middle align-right text-right">
+                    <div class="contact-item  align-middle align-right text-right">
 
                         <ul class="contact-item__info">
                             <li>Mon-Fr: 09:00 - 17:00</li>
@@ -316,7 +429,7 @@
                             <img src="assets/img/news-3.png" alt="logo icon" class="contact-item__img">
                         </div>
                     </div>
-                    <div class="contact-item d-flex align-middle align-right text-right">
+                    <div class="contact-item  align-middle align-right text-right">
 
                         <ul class="contact-item__info">
                             <li><a href="" target="_blank">Kyiv, Victory Square, 3</a></li>
@@ -325,7 +438,7 @@
                             <img src="assets/img/news-1.png" alt="logo icon" class="contact-item__img">
                         </div>
                     </div>
-                    <div class="contact-item d-flex align-middle align-right text-right">
+                    <div class="contact-item  align-middle align-right text-right">
                         <ul class="contact-item__info">
                             <li><a class="contact_sm-tel" href="tel:25 568 36 55">25 568 36 55</a></li>
                             <li><a href="mailto:support@gmail.com">support@gmail.com</a></li>
@@ -338,7 +451,7 @@
             </div>
         </div>
         <div class="row d-flex align-middle d-lg-none">
-            <div class="col-sm-6 col-xs-4 align-center d-flex">
+            <div class="col-sm-6 col-xs-4">
                 <ul class="social__list ">
                     <li class="social__item">
                         <a href="" target="_blank" class="social__link d-flex align-middle align-center">
@@ -361,11 +474,12 @@
                         </a>
                     </li>
                 </ul>
+
             </div>
-            <div class="col-sm-6 col-xs-8 align-center d-flex">
+            <div class="col-sm-6 col-xs-8 d-flex align-right">
 
 
-                <div class="d-flex align-middle align-left">
+                <div class="">
                     <a href="" class="btn btn-primary btn-donate text-uppercase text-center">Donate</a>
                     <ul class="card-list d-flex  align-middle align-left">
                         <li class="card-list__item d-flex align-middle align-center">
@@ -380,19 +494,169 @@
 
             </div>
         </div>
-        <div class="row">
+        <div class="row footer__copyright --relative">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-                <div class="footer__copyright --relative">Development by
+                <div class="footer__copyright--text ">Development by
                     <a href="" target="_blank">WebTune</a></div>
             </div>
         </div>
     </div>
 </footer>
 
+
+<div class="container">
+    <div class="wrap">
+        <div class="box">
+            <p>test 1</p>
+            <p data-copy-text="">Say goodbye to these, because it's the last time! I hear the jury's still out on
+                science. I've opened a door here that I regret. I'm a monster. Really? Did nothing cancel? I'm afraid I
+                just blue myself.</p>
+        </div>
+        <div class="box">
+            <p>test 2</p>
+            <p data-copy-text="">I don't criticize you! And if you're worried about criticism, sometimes a diet is the
+                best defense. I don't criticize you! And if you're worried about criticism, sometimes a diet is the best
+                defense. Say goodbye to these, because it's the last time!</p>
+        </div>
+    </div>
+</div>
+
+
 <script src="./assets/js/jquery-3.6.0.min.js"></script>
 <script src="assets/js/swiper-bundle.min.js"></script>
 
 <script src="assets/js/js_app.min.js"></script>
+
+<script>
+    'use strict';
+
+    document.addEventListener('DOMContentLoaded', function () {
+        copyText.init()
+    });
+
+    var copyText = {
+        init: function () {
+            if (document.querySelectorAll('[data-copy-text]').length) {
+                var cp = document.querySelectorAll('[data-copy-text]');
+
+                for (var i = 0, l = cp.length; i < l; i++) {
+                    copyText.addCopy(cp[i]);
+                }
+            }
+        },
+        addCopy: function (el) {
+            if (typeof el !== 'undifined') {
+                var parent = el.parentNode;
+                if (!parent.querySelectorAll('span.copy-btn').length && window.getSelection) {
+                    var cpBtn = document.createElement('I');
+
+                    parent.setAttribute('style', 'position:relative');
+                    parent.appendChild(cpBtn);
+
+                    cpBtn.classList.add('material-icons');
+                    cpBtn.textContent = 'content_copy';
+                    cpBtn.setAttribute('title', 'Copy Text');
+
+                    copyText.addCopyEvent(cpBtn, el);
+                }
+            }
+        },
+        addCopyEvent: function (btn, el) {
+            var coppied = false;
+            var timer = 0;
+
+            function copyText() {
+                function showCheckmark() {
+                    btn.textContent = 'check';
+                    btn.classList.add('active');
+                }
+
+                function hideCheckmark() {
+                    btn.classList.remove('active');
+                    btn.textContent = 'content_copy';
+                    timer = 0;
+                }
+
+                if (timer === 0) {
+                    if (window.getSelection) {
+                        var selection = window.getSelection();
+                        var range = document.createRange();
+                        range.selectNodeContents(el);
+                        selection.removeAllRanges();
+                        selection.addRange(range);
+
+                        try {
+                            document.execCommand('copy');
+                            coppied = true;
+                        } catch (err) {
+                            console.error(err);
+                        }
+
+                        selection.removeAllRanges();
+                    } else {
+                        console.error('your browser does not support copy');
+                    }
+
+                    if (coppied) {
+                        clearTimeout(timer);
+                        showCheckmark();
+                        timer = setTimeout(hideCheckmark, 2000);
+                    }
+                }
+            }
+
+            if (typeof btn !== 'undifined' && typeof el !== 'undifined') {
+                btn.addEventListener('click', copyText, false);
+            }
+        },
+    }
+</script>
+<script>
+
+
+    $('.tab').each(function () {
+        let $thisSwiper = $(this).find('.tab-nav__item');
+        let $wrapTab = $(this);
+        $thisSwiper.click(function () {
+
+            let tab_id = $(this).attr('data-tab');
+
+            $wrapTab.find('.tab-nav__item').removeClass('current');
+            $wrapTab.find(".tab-content").removeClass('current');
+
+            $(this).addClass('current');
+            $("#" + tab_id).addClass('current');
+            var selector = event.target.getAttribute('data-tab');
+
+
+        });
+    });
+
+
+</script>
+
+
+<script>
+    document.querySelectorAll(".content").forEach((item, index) => {
+        item.addEventListener("click", async (event) => {
+            if (!navigator.clipboard) {
+                // Clipboard API not available
+                return;
+            }
+            try {
+                await navigator.clipboard.writeText(event.target.innerText);
+                // alert("Copied to clipboard");
+
+                /*  var tooltip = document.getElementById("myTooltip");
+                  tooltip.innerHTML = "Copied"*/
+
+            } catch (err) {
+                console.error("Failed to copy!", err);
+            }
+        });
+    });
+
+</script>
 
 </body>
 </html>

@@ -26,7 +26,7 @@
             <span></span>
         </div>
 
-        <a href="#" class="logo__wrap align-middle">
+        <a href="index.html" class="logo__wrap align-middle">
             <img src="assets/img/logo.svg" alt="logo company" class="logo__icon">
 
             <div class="text-right">
@@ -57,16 +57,17 @@
                     </li>
                 </ul>
             </nav>
-            <a href="" class="btn  btn-donate d-none d-md-block">Donate</a>
+            <a href="donate.html" class="btn  btn-donate d-none d-md-block">Donate</a>
             <div class="d-flex align-middle align-right">
-                <nav class="languages-navigation  d-md-block">
-                    <ul id="lang-navigation" class="lang">
-                        <li class="lang-item current-lang "><a href="#">EN</a></li>
-                        <li class="lang-item"><a href="#">RU</a></li>
+                <nav class="languages-navigation d-none d-md-block">
+                    <ul class="languages-menu">
+                        <select name="lang_choice_1" id="lang_choice_1">
+                            <option value="uk">UA</option>
+                            <option value="eng" selected="selected">ENG</option>
+                        </select>
                     </ul>
                 </nav>
             </div>
-
         </div>
 
         <a href="donate.html" class="btn  btn-donate d-block d-md-none">Donate</a>
@@ -326,7 +327,7 @@
         </div>
     </section>
 
-    <section class="section s-team s-team--about">
+    <section class="section s-team">
         <div class="container">
             <div class="row align-middle s-team__row">
                 <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-xs-12">
@@ -646,12 +647,11 @@
         </div>
     </section>
 </main>
-
 <footer class="footer">
     <div class="container ">
         <div class="row footer__content">
             <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 logo__col">
-                <a href="#" class=" logo__wrap align-middle">
+                <a href="index.html" class=" logo__wrap align-middle">
                     <img src="assets/img/logo.svg" alt="logo company" class="logo__icon">
 
                     <div class="">
@@ -668,25 +668,24 @@
                     <ul class="social__list ">
                         <li class="social__item">
                             <a href="" target="_blank" class="social__link d-flex align-middle align-center">
-                                <img src="assets/img/facebook.svg" alt="">
+                                <i class="icon-facebook"></i>
                             </a>
                         </li>
                         <li class="social__item">
                             <a href="" target="_blank" class="social__link d-flex align-middle align-center">
-                                <img src="assets/img/instagram.svg" alt="" class="social__icon">
+                                <i class="icon-youtube"></i>
                             </a>
                         </li>
                         <li class="social__item">
                             <a href="" target="_blank" class="social__link d-flex align-middle align-center">
-                                <img src="assets/img/pinterest.svg" alt="" class="social__icon">
+                                <i class="icon-linkedin"></i>
                             </a>
                         </li>
                         <li class="social__item">
                             <a href="" target="_blank" class="social__link d-flex align-middle align-center">
-                                <img src="assets/img/telegram.svg" alt="" class="social__icon">
+                                <i class="icon-instagram"></i>
                             </a>
                         </li>
-
                     </ul>
 
                     <div class="d-flex align-middle align-left">
@@ -793,36 +792,35 @@
             </div>
         </div>
         <div class="row d-flex align-middle d-lg-none">
-            <div class="col-sm-6 col-xs-4 align-center d-flex">
+            <div class="col-sm-6 col-xs-4">
                 <ul class="social__list ">
                     <li class="social__item">
                         <a href="" target="_blank" class="social__link d-flex align-middle align-center">
-                            <img src="assets/img/facebook.svg" alt="">
+                            <i class="icon-facebook"></i>
                         </a>
                     </li>
                     <li class="social__item">
                         <a href="" target="_blank" class="social__link d-flex align-middle align-center">
-                            <img src="assets/img/instagram.svg" alt="" class="social__icon">
+                            <i class="icon-youtube"></i>
                         </a>
                     </li>
                     <li class="social__item">
                         <a href="" target="_blank" class="social__link d-flex align-middle align-center">
-                            <img src="assets/img/pinterest.svg" alt="" class="social__icon">
+                            <i class="icon-linkedin"></i>
                         </a>
                     </li>
                     <li class="social__item">
                         <a href="" target="_blank" class="social__link d-flex align-middle align-center">
-                            <img src="assets/img/telegram.svg" alt="" class="social__icon">
+                            <i class="icon-instagram"></i>
                         </a>
                     </li>
-
                 </ul>
 
             </div>
-            <div class="col-sm-6 col-xs-8 align-center d-flex">
+            <div class="col-sm-6 col-xs-8 d-flex align-right">
 
 
-                <div class="d-flex align-middle align-left">
+                <div class="">
                     <a href="" class="btn btn-primary btn-donate text-uppercase text-center">Donate</a>
                     <ul class="card-list d-flex  align-middle align-left">
                         <li class="card-list__item d-flex align-middle align-center">
@@ -837,9 +835,9 @@
 
             </div>
         </div>
-        <div class="row">
+        <div class="row footer__copyright --relative">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-                <div class="footer__copyright --relative">Development by
+                <div class="footer__copyright--text ">Development by
                     <a href="" target="_blank">WebTune</a></div>
             </div>
         </div>
@@ -848,9 +846,14 @@
 
 <script src="./assets/js/jquery-3.6.0.min.js"></script>
 <script src="assets/js/swiper-bundle.min.js"></script>
+<script src="assets/js/jquery.selectric.min.js"></script>
 <script src="assets/js/js_app.min.js"></script>
 
-
+<script>
+    $(function () {
+        $('.languages-navigation select').selectric();
+    });
+</script>
 <div class="popup-wrapper">
     <div class="bg-layer"></div>
     <div class="popup-content" data-rel="more">
